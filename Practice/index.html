@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p id="day"></p>
+        <p id="current"></p>
+    </div>
+
+    <script>
+        let pm = '';
+        const d = new Date();
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        document.getElementById('day').innerHTML =  'Today is : ' + days[d.getDay()];
+        if(d.getHours() >= 12 ){
+          pm = d.getHours() - 12 + 'PM';
+        }else {
+            pm = d.getHours() + 'AM';
+        }
+        document.getElementById('current').innerHTML =  'Current Time : ' + pm + ' : ' + d.getMinutes() + ' : ' + d.getSeconds();
+
+    </script>
+</body>
+</html>
