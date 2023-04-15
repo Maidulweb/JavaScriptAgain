@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leap Year JS</title>
+  </head>
+  <body>
+    <p id="leapyear"></p>
+    <script>
+      /* function nyear(year) {
+        return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
+      }
+      console.log(nyear(2008)); */
+
+      /* function nyear(year) {
+        if (new Date(year, 1, 29).getMonth() === 1) {
+          console.log("Leap year");
+        } else {
+          console.log("Not leap year !!!");
+        }
+      }
+      nyear(2000);
+      nyear(2002);
+      nyear(2004);
+      nyear(2011);
+      nyear(2016); */
+
+      function year(year) {
+        if ((year % 100 !== 0 && year % 4 === 0) || year % 400 === 0) {
+          console.log("Leap year");
+        } else {
+          console.log("Not leap year!!!");
+        }
+      }
+      year(2000);
+      year(2002);
+      year(2004);
+      year(2012);
+      year(2008);
+    </script>
+  </body>
+</html>

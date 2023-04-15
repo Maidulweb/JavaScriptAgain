@@ -9,16 +9,12 @@
   <body>
     <p id="sunday"></p>
     <script>
-      let num = Math.ceil(Math.random() * 10);
-      console.log(num);
-      let guess = prompt("Input a number");
-      console.log(guess);
-      if (num == guess) {
-        console.log("good job");
-      } else {
-        console.log("Not match");
+      for (let year = 2014; year <= 2050; year++) {
+        let sun = new Date(year, 0, 1).getDay() === 0;
+        if (sun) {
+          console.log(year + " is sunday");
+        }
       }
-      console.log(num);
     </script>
   </body>
 </html>
