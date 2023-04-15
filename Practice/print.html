@@ -20,11 +20,14 @@
       quaerat voluptates, eum dolore perferendis sed accusantium temporibus
       vitae debitis modi.
     </p>
+    <p id="date"></p>
     <button id="printHide" onclick="printHere()">Print</button>
     <script>
       function printHere() {
         window.print();
       }
+      let d = new Date();
+      document.getElementById('date').innerHTML = d.toLocaleDateString();
     </script>
   </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Rotate 2</title>
+  </head>
+  <body onload="txtFunction('rotate')">
+    <p id="rotate">w3resource</p>
+    <p id="result"></p>
+
+    <script>
+      function txtFunction(rotate) {
+        let idtxt = document.getElementById(rotate);
+        let txtNodes = idtxt.childNodes[0];
+        let txt = txtNodes.data;
+        let interTxt = setInterval(function () {
+          txt = txt[txt.length - 1] + txt.substring(0, txt.length - 1);
+          document.getElementById("result").innerHTML = txt;
+        }, 100);
+      }
+    </script>
+  </body>
+</html>

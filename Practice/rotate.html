@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScropt Rotate Word</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="rotate"></h1>
+    <script>
+      let word = "w3resource";
+      let wordSplit = word.split("");
+      let wordInterval = setInterval(wordFunction, 1000);
+      function wordFunction() {
+        let lastWord = wordSplit.pop();
+        wordSplit.unshift(lastWord);
+        let wordJoin = wordSplit.join("");
+        document.getElementById("rotate").innerHTML = wordJoin;
+        if (wordJoin === "w3resource") {
+          clearInterval(wordInterval);
+        }
+      }
+    </script>
+  </body>
+</html>

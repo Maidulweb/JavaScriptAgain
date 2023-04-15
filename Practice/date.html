@@ -22,26 +22,43 @@
     <div class="container">
       <p id="day3"></p>
       <p id="current3"></p>
+      <p id="current4"></p>
     </div>
     <!--********** ##01 ********** -->
     <script>
-        let pm = '';
-        let am = '';
-        const da = new Date();
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        document.getElementById('day').innerHTML =  'Today is : ' + days[da.getDay()];
-        if(da.getHours() >= 12 ){
-          pm = da.getHours() - 12;
-          am = 'PM';
-        } 
-        else {
-            pm = da.getHours();
-            am = 'AM'
-        }
-        document.getElementById('current').innerHTML =  'Current Time : ' + pm + ' : ' + da.getMinutes() + ' : ' + da.getSeconds() + ' ' + am ;
-    </script> 
+      let pm = "";
+      let am = "";
+      const da = new Date();
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      document.getElementById("day").innerHTML =
+        "Today is : " + days[da.getDay()];
+      if (da.getHours() >= 12) {
+        pm = da.getHours() - 12;
+        am = "PM";
+      } else {
+        pm = da.getHours();
+        am = "AM";
+      }
+      document.getElementById("current").innerHTML =
+        "Current Time : " +
+        pm +
+        " : " +
+        da.getMinutes() +
+        " : " +
+        da.getSeconds() +
+        " " +
+        am;
+    </script>
     <!--********* ##02 ********** -->
-     <script>
+    <script>
       function currentTime(time) {
         let hours = time.getHours();
         let minutes = time.getMinutes();
@@ -52,21 +69,26 @@
         hours = hours < 10 ? "0" + hours : hours;
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-        let cTime = hours + ' : ' + minutes + ' : ' + seconds + ' ' + amPm
+        let cTime = hours + " : " + minutes + " : " + seconds + " " + amPm;
         return cTime;
       }
       document.getElementById("current2").innerHTML = currentTime(new Date());
-    </script> 
+    </script>
 
     <!--******* ##03 ********-->
     <script>
       let d3 = new Date();
-      document.getElementById("current3").innerHTML = d3.toLocaleString("en-us", {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true,
-      });
+      document.getElementById("current3").innerHTML = d3.toLocaleString(
+        "en-us",
+        {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        }
+      );
+
+      document.getElementById("current3").innerHTML = d3.toLocaleTimeString();
     </script>
   </body>
 </html>
