@@ -4,21 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sunday</title>
+    <title>Index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <p id="sunday"></p>
     <script>
-      let num = Math.ceil(Math.random() * 10);
-      console.log(num);
-      let guess = prompt("Input a number");
-      console.log(guess);
-      if (num == guess) {
-        console.log("good job");
-      } else {
-        console.log("Not match");
-      }
-      console.log(num);
+      let name = "Mukly";
+      let num = 1234;
+      this[name] = num;
+      console.log(this[name]);
     </script>
   </body>
 </html>

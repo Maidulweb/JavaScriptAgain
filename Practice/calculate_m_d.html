@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container mx-auto px-4 m-5">
+      <div class="flex">
+        <div class="flex-initial w-64">
+          <input
+            class="border rounded"
+            id="firstnumber"
+            type="number"
+            placeholder="First Number"
+          />
+        </div>
+        <div class="flex-initial w-64">
+          <input
+            class="border rounded"
+            id="secnumber"
+            type="number"
+            placeholder="Second Number"
+          />
+        </div>
+      </div>
+      <div class="flex">
+        <div class="flex-initial w-64 mt-2">
+          <button class="py-1 px-10 border rounded" onclick="multiple()">
+            *
+          </button>
+        </div>
+        <div class="flex-initial w-64 mt-2">
+          <button class="py-1 px-10 border rounded" onclick="divided()">
+            /
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="w-64">
+      <p class="text-center" id="result">Result:</p>
+    </div>
+
+    <script>
+      function multiple() {
+        let firstNumber = document.getElementById("firstnumber").value;
+        let secNumber = document.getElementById("secnumber").value;
+        let result = firstNumber * secNumber;
+        document.getElementById("result").innerHTML = "Result : " + result;
+      }
+      function divided() {
+        let firstNumber = document.getElementById("firstnumber").value;
+        let secNumber = document.getElementById("secnumber").value;
+        let result = firstNumber / secNumber;
+        document.getElementById("result").innerHTML = "Result : " + result;
+      }
+    </script>
+  </body>
+</html>

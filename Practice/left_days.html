@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Left Days</title>
+  </head>
+  <body>
+    <p id="left-days"></p>
+    <script>
+      let today = new Date();
+      console.log(today);
+      let leftDay = new Date(today.getFullYear(), 11, 25);
+      if (today.getMonth() == 11 && today.getDate() > 25) {
+        leftDay.setFullYear(leftDay.setFullYear);
+      }
+      let one_day = 1000 * 60 * 60 * 24;
+      let result = (leftDay.getTime() - today.getTime()) / one_day;
+      document.getElementById("left-days").innerHTML =
+        Math.ceil(result) + " Days left.";
+      console.log(Math.ceil(result));
+    </script>
+  </body>
+</html>

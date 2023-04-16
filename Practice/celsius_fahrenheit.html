@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container mx-auto px-4 m-5">
+      <div class="flex">
+        <div class="flex-initial w-64">
+          <label for=""> Celsius to Fahrenheit</label>
+          <input
+            class="border rounded"
+            id="firstnumber"
+            type="number"
+            placeholder="C/F"
+          />
+        </div>
+        <div class="flex-initial w-64">
+          <label for="">Fahrenheit to Celsius</label>
+          <input
+            class="border rounded"
+            id="secnumber"
+            type="number"
+            placeholder="F/C"
+          />
+        </div>
+      </div>
+      <div class="flex">
+        <div class="flex-initial w-64 mt-2">
+          <button class="py-1 px-4 border rounded" onclick="celsius()">
+            Celsius to Fahrenheit
+          </button>
+        </div>
+        <div class="flex-initial w-64 mt-2">
+          <button class="py-1 px-4 border rounded" onclick="fahrenheit()">
+            Fahrenheit to Celsius
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <p class="text-center flex-initial w-64 mt-2" id="result">Result:</p>
+      <p class="text-center flex-initial w-64 mt-2" id="result2">Result:</p>
+    </div>
+    <!-- c/5 = (f-32)/9 -->
+    <script>
+      function celsius() {
+        let f = document.getElementById("firstnumber").value;
+        let c = ((f - 32) * 5) / 9;
+        document.getElementById("result").innerHTML = "Result : " + c;
+      }
+      function fahrenheit() {
+        let c = document.getElementById("secnumber").value;
+        let f = (9 * c) / 5 + 32;
+        document.getElementById("result2").innerHTML = "Result : " + f;
+      }
+    </script>
+  </body>
+</html>
