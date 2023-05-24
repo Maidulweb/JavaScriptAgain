@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positive Negative</title>
+  </head>
+  <body>
+    <script>
+      /* function positiveNegative(a, b) {
+        if (a > 0) {
+          console.log(a + " is positive");
+        } else {
+          console.log(a + " is negative!!!");
+        }
+        if (b > 0) {
+          console.log(b + " is positive");
+        } else {
+          console.log(b + " is negative!!!");
+        }
+      }
+      positiveNegative(-5, -5); */
+      function positiveNegative(a, b) {
+        if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
+          return true;
+        }
+        return false;
+      }
+      console.log(positiveNegative(5, -5));
+      console.log(positiveNegative(-5, 5));
+      console.log(positiveNegative(-5, -5));
+      console.log(positiveNegative(5, 5));
+    </script>
+  </body>
+</html>
